@@ -1,0 +1,136 @@
+.containerAccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EAECF7;
+    box-shadow: 0 4px 4px 0 #DCE1FB;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 10px 24px 10px;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.mainAccount {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 16px;
+}
+
+.mainAccount>* {}
+
+.leftAccount {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.leftAccount>* {
+    width: 100%;
+    border-radius: 24px;
+    background-color: #EAECF7;
+    box-shadow: 0 4px 4px 0 #DCE1FB;
+    padding: 16px;
+    transition: 0.2s;
+}
+
+.rightAccount {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+    border-radius: 24px;
+    background-color: #EAECF7;
+    box-shadow: 0 4px 4px 0 #DCE1FB;
+    padding: 24px;
+    min-height: 500px;
+}
+
+.divImgAccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.divImgAccount>*:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2aa555;
+    border-radius: 16px;
+}
+
+.imgAccount {
+    border-radius: 16px;
+}
+
+.nameAccount {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.settingAccount {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.settingAccount:hover {
+    background-color: #d0d4ea;
+}
+
+.msgAccount {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.msgAccount:hover {
+    background-color: #d0d4ea;
+}
+
+.sellAccount {
+    cursor: pointer;
+    background-color: #8C9AE3;
+    color: white;
+    font-weight: 800;
+}
+
+.sellAccount:hover {
+    background-color: #6273c8;
+    /* color: black; */
+}
+
+.nameCategAccount {
+    font-weight: 800;
+    margin-top: 16px;
+}
+
+.carouselAccount {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    gap: 10px;
+    padding: 16px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carouselAccount::-webkit-scrollbar {
+    display: none;
+    /* Disable scrollbar for Chrome, Safari, and Opera */
+}
+
+.carouselAccount>* {
+    display: flex;
+    gap: 12px;
+}

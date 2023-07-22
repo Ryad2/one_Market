@@ -1,0 +1,43 @@
+.mainCard {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.mainCard:hover {
+    transform: scale(1.01);
+}
+
+.cardImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardTitle {
+    font-weight: 700;
+}
+
+.cardPrice {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end
+}
+
+.cardPrice>div {
+    background-color: #8C9AE3;
+    border-radius: 100px;
+    color: white;
+    padding: 4px 12px 4px 12px;
+    font-weight: 700;
+}

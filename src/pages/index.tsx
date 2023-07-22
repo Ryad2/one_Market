@@ -1,8 +1,7 @@
 import { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 import { authOptions } from "~/server/auth";
 import { api } from "~/utils/api";
 
@@ -29,6 +28,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   if (!session) {
     return { redirect: { destination: "/auth", permanent: false } };
   } else {
-    return { redirect: { destination: "/marketplace", permanent: false } };
+    return { redirect: { destination: "/account", permanent: false } };
   }
 }
