@@ -19,7 +19,9 @@ export default function Account() {
             <div>
               <img src="/nouns.png" alt="" className={styles.imgAccount} />
             </div>
-            <div className={styles.nameAccount}>{session.data.user.email}</div>
+            <div className={styles.nameAccount}>
+              {session.data?.user?.email ?? "John.eth"}
+            </div>
           </div>
           <div className={styles.msgAccount}>Messages</div>
           <div className={styles.settingAccount}>Setting</div>

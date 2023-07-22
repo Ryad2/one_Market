@@ -1,9 +1,7 @@
 /* eslint-disable */
-import React, { useState } from "react";
 import Link from "next/link";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
-
-import { cn } from "../../lib/utils";
 
 type HeaderProps = {
   className?: string;
