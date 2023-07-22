@@ -69,5 +69,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   if (session) {
     return { redirect: { destination: "/marketplace", permanent: false } };
+  } else {
+    return { props: {} };
   }
 }
