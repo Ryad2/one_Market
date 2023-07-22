@@ -41,16 +41,12 @@ declare module "next-auth" {
  */
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    session: ({ session, token }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: token.sub,
-      },
-    }),
+    async jwt({ token }) {
+      token.userRole = "admin";
+      return token;
+    },
   },
   adapter: PrismaAdapter(prisma),
-  session: { strategy: "jwt" },
   providers: [
     {
       id: "worldcoin",
