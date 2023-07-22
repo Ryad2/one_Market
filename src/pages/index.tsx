@@ -26,9 +26,10 @@ export default function Home() {
                 <span>You are not signed in</span>
                 <a
                   href={`/api/auth/signin`}
-                  onClick={(e) => {
+                  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+                  onClick={async (e) => {
                     e.preventDefault();
-                    signIn("worldcoin"); // when worldcoin is the only provider
+                    await signIn("worldcoin"); // when worldcoin is the only provider
                     // signIn() // when there are multiple providers
                   }}
                 >
@@ -50,9 +51,10 @@ export default function Home() {
                 </span>
                 <a
                   href={`/api/auth/signout`}
-                  onClick={(e) => {
+                  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+                  onClick={async (e) => {
                     e.preventDefault();
-                    signOut();
+                    await signOut();
                   }}
                 >
                   Sign out
