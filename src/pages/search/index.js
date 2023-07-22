@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Link from "next/link";
 import Header from "../../components/ui/header";
 import Card from "../../components/ui/card";

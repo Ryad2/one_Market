@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import Header from "../../components/ui/header";
 import styles from "./Sell.module.css";

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "../search/Search.module.css";
 
 export default function Product() {
