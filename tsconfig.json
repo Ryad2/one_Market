@@ -28,8 +28,10 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "src/components/ui/header.tsx",
-    "src/components/ui/button.jsx"
+    "src/components/ui/header.jsx",
+    "src/components/ui/button.jsx",
+    "src/pages/search/index.js",
+    "src/pages/sell/index.js"
   ],
   "exclude": ["node_modules"]
 }
