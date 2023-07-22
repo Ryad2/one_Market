@@ -4,7 +4,7 @@ import Header from "../../components/ui/header";
 
 import styles from "./Account.module.css";
 import { useSession } from "next-auth/react";
-import Card from "~/components/ui/Card";
+import Card from "~/components/ui/card";
 
 export default function Account() {
   const session = useSession();
