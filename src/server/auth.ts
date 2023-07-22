@@ -40,13 +40,7 @@ declare module "next-auth" {
  * @see https://next-auth.js.org/configuration/options
  */
 export const authOptions: NextAuthOptions = {
-  callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin";
-      return token;
-    },
-  },
-  adapter: PrismaAdapter(prisma),
+  // https://next-auth.js.org/configuration/providers/oauth
   providers: [
     {
       id: "worldcoin",
@@ -54,8 +48,8 @@ export const authOptions: NextAuthOptions = {
       type: "oauth",
       wellKnown: "https://id.worldcoin.org/.well-known/openid-configuration",
       authorization: { params: { scope: "openid" } },
-      clientId: env.WLD_CLIENT_ID,
-      clientSecret: env.WLD_CLIENT_SECRET,
+      clientId: process.env.WLD_CLIENT_ID,
+      clientSecret: process.env.WLD_CLIENT_SECRET,
       idToken: true,
       profile(profile) {
         return {
@@ -67,6 +61,12 @@ export const authOptions: NextAuthOptions = {
       },
     },
   ],
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin";
+      return token;
+    },
+  },
 };
 
 /**
