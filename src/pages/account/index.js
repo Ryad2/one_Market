@@ -20,10 +20,7 @@ export default function Account() {
               <img src="/nouns.png" alt="" className={styles.imgAccount} />
             </div>
             <div className={styles.nameAccount}>
-              {session.data?.user?.name ??
-                session.data?.user?.email ??
-                session.data?.user?.image ??
-                "John.eth"}
+              {session.user.email ?? session.user.name ?? "David.eth"}
             </div>
           </div>
           <div className={styles.msgAccount}>Messages</div>

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./Header.module.css";
+import { signOut } from "next-auth/react";
 
 type HeaderProps = {
   className?: string;
@@ -12,8 +13,9 @@ const Header = React.forwardRef<unknown, HeaderProps>(
   ({ className, title }, ref) => {
     const [isSignedIn, setIsSignedIn] = useState(false);
 
-    const handleSignInClick = () => {
-      setIsSignedIn((prevState) => !prevState);
+    const handleSignInClick = (e: any) => {
+      e.preventDefault();
+      signOut();
     };
 
     return (
@@ -47,12 +49,11 @@ const Header = React.forwardRef<unknown, HeaderProps>(
           </Link>
         </div>
         <div className={styles.connectHeader} onClick={handleSignInClick}>
-          {isSignedIn && (
-            <div className={styles.avatarNouns}>
-              <img src="/nouns.png" alt="" />
-            </div>
-          )}
-          {isSignedIn ? "David" : "Sign in"}
+          <div className={styles.avatarNouns}>
+            <img src="/nouns.png" alt="" />
+          </div>
+
+          {"David"}
         </div>
       </div>
     );
