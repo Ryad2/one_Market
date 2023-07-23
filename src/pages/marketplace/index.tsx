@@ -77,12 +77,10 @@ export default function Marketplace() {
           <div>Trending categories 🔥</div>
           <div className={styles.categoriesIndex}>
             {categ.map((e, index) => (
-              <Link key={index} href="/account">
-                <div>
-                  <img src={e.img} alt="" />
-                  <div>{e.name}</div>
-                </div>
-              </Link>
+              <div>
+                <img src={e.img} alt="" />
+                <div>{e.name}</div>
+              </div>
             ))}
           </div>
         </div>
