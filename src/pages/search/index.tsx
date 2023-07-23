@@ -25,10 +25,70 @@ const products = [
     img: " https://upload.wikimedia.org/wikipedia/en/1/1c/Rick_Astley_-_Whenever_You_Need_Somebody.png",
     price: 10,
   },
+
   {
     name: "Unused Playstation 5",
     img: " https://images.immediate.co.uk/production/volatile/sites/3/2020/08/playstation-5-77d37a0.jpg",
     price: 390,
+  },
+
+  {
+    name: "Trek bicycle Marlin 4 second generation",
+    img: "https://media.trekbikes.com/image/upload/w_1200/Marlin4_22_29759_A_Portrait",
+    price: 600,
+  },
+
+  {
+    name: "Tissot watch classic dream",
+    img: "https://www.tissotwatches.com/media/catalog/product/T/1/T129.410.36.261.00_R_1.png?im=Resize=(1200,1200)",
+    price: 200,
+  },
+  {
+    name: "Sony Bravia X95k Mini LED TV",
+    img: "https://cdn.mos.cms.futurecdn.net/jwT47j5SxowmzWVxbDBDUb-1200-80.jpg",
+    price: 2180,
+  },
+
+  {
+    name: "Triangle Wireless Speaker",
+    img: "https://www.trianglehifi.fr/cdn/shop/products/ln01A-chestnut-packshot-shopify_1_1200x1200.jpg?v=1683719803",
+    price: 250,
+  },
+
+  {
+    name: "Dyson Vacuum Cleaner",
+    img: "https://img3.semeubler.com/3185-large_default/aspirateur-dyson.jpg",
+    price: 185,
+  },
+  {
+    name: "EOS 90D Canon Camera",
+    img: "https://cdn.lesnumeriques.com/optim/product/53/53485/d4a96b65-eos-90d__450_400.jpeg",
+    price: 700,
+  },
+  {
+    name: "Canondale Trail Mountain Bike SL 1",
+    img: " https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/641ec1c1-0d49-45ab-a7fd-3b1d6676a843.webp",
+    price: 1500,
+  },
+  {
+    name: "Schindelhauer Gustav Bike",
+    img: "https://img.leboncoin.fr/api/v1/lbcpb1/images/b0/1f/65/b01f6574c228ece187be4bda05e8acd5975389ac.jpg?rule=classified-1200x800-webp",
+    price: 900,
+  },
+  {
+    name: "Peugeot city Bike",
+    img: "https://img.leboncoin.fr/api/v1/lbcpb1/images/0d/18/44/0d1844987d8c2250ce39a8673e9762e74f81a583.jpg?rule=ad-large",
+    price: 80,
+  },
+  {
+    name: "Rockrider st 530s",
+    img: "https://img.leboncoin.fr/api/v1/lbcpb1/images/de/aa/e4/deaae40c518f20ececff184def6a641be1af03bb.jpg?rule=ad-large",
+    price: 600,
+  },
+  {
+    name: "Very comfortable couch",
+    img: "https://img.leboncoin.fr/api/v1/lbcpb1/images/eb/ac/c9/ebacc9677265d9eac7fcb3770b98b8b6c6718e1b.jpg?rule=ad-large  ",
+    price: 400,
   },
 ];
 

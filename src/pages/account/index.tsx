@@ -24,7 +24,7 @@ export default function Account() {
             </div>
             <div className={styles.nameAccount}>
               <h2 className="text-lg">WorldId identity:</h2>
-              <h2 className="text-lg">
+              <h2 className="truncate text-lg">
                 ${session?.user.email ?? session?.user.name ?? "David.eth"}
               </h2>
               <button>
