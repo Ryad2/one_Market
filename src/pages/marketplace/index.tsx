@@ -59,9 +59,7 @@ export default function Marketplace() {
             </div>
             <div className={styles.descIndex}>
               One Chance Marketplace delivers a scam-free, bot-free platform,
-              ensuring secure and private transactions through Worldcoin and
-              Zkbob. Enjoy encrypted negotiations with XMTP, all in a
-              decentralized environment.
+              ensuring secure and private transactions through Worldcoin.
             </div>
             <Link href="/account" className="mt-8 h-12 w-32">
               <div className="flex h-12 w-32 items-center justify-center rounded-lg bg-blue-400">
@@ -77,7 +75,7 @@ export default function Marketplace() {
           <div>Trending categories 🔥</div>
           <div className={styles.categoriesIndex}>
             {categ.map((e, index) => (
-              <div>
+              <div key={index}>
                 <img src={e.img} alt="" />
                 <div>{e.name}</div>
               </div>
