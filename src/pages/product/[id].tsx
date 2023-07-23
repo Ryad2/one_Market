@@ -49,7 +49,7 @@ export default function Page() {
           </div>
           <div className={styles.boxPay}>
             <div className={styles.balance}>{`balance: ${
-              data!.decimals * 1887 ?? "1521"
+              data?.decimals ? data.decimals * 1887 : "1521"
             } $USDC`}</div>
             <div className={styles.valueToPay}>1200 $USDC</div>
             <div className={styles.buyBtn}>Buy</div>
