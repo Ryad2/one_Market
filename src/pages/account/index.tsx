@@ -78,12 +78,12 @@ export default function Account() {
   );
 }
 
-// export async function getServerSideProps(context: GetServerSidePropsContext) {
-//   const session = await getServerSession(context.req, context.res, authOptions);
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const session = await getServerSession(context.req, context.res, authOptions);
 
-//   if (!session) {
-//     return { redirect: { destination: "/auth", permanent: false } };
-//   } else {
-//     return { props: {} };
-//   }
-// }
+  if (!session) {
+    return { redirect: { destination: "/auth", permanent: false } };
+  } else {
+    return { props: {} };
+  }
+}
