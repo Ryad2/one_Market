@@ -9,9 +9,11 @@ import styles from "./Account.module.css";
 import { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth";
 import { authOptions } from "~/server/auth";
+import { useAccount, useDisconnect } from "wagmi";
 
 export default function Account() {
   const session = useSession().data;
+  const { disconnect } = useDisconnect();
 
   return (
     <div className={styles.containerAccount}>
@@ -32,6 +34,7 @@ export default function Account() {
                   onClick={(e: any) => {
                     e.preventDefault();
                     signOut();
+                    disconnect();
                   }}
                 >
                   <h2 className="underline">Log out</h2>

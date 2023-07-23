@@ -4,9 +4,15 @@ import Link from "next/link";
 
 import styles from "./Product.module.css";
 import { useSession } from "next-auth/react";
+import { useAccount, useBalance } from "wagmi";
 export default function Page() {
   const router = useRouter();
   const session = useSession().data;
+  const address = useAccount().address;
+  const { data, isError, isLoading } = useBalance({
+    address: address,
+  });
+
   return (
     <div className={styles.containerProduct}>
       <Header />
@@ -42,7 +48,9 @@ export default function Page() {
             <div className={styles.contactBtn}>Send a message</div>
           </div>
           <div className={styles.boxPay}>
-            <div className={styles.balance}>balance: 1521 $USDC</div>
+            <div className={styles.balance}>{`balance: ${
+              data!.decimals * 1887 ?? "1521"
+            } $USDC`}</div>
             <div className={styles.valueToPay}>1200 $USDC</div>
             <div className={styles.buyBtn}>Buy</div>
           </div>
