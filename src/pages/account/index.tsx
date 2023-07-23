@@ -1,11 +1,11 @@
 /* eslint-disable */
 import Link from "next/link";
 
-import Header from "../../components/ui/header";
 import Card from "../../components/ui/card";
+import Header from "../../components/ui/header";
 
+import { signOut, useSession } from "next-auth/react";
 import styles from "./Account.module.css";
-import { useSession } from "next-auth/react";
 import { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth";
 import { authOptions } from "~/server/auth";
@@ -23,7 +23,20 @@ export default function Account() {
               <img src="/nouns.png" alt="" className={styles.imgAccount} />
             </div>
             <div className={styles.nameAccount}>
-              {session?.user.email ?? session?.user.name ?? "David.eth"}
+              <h2 className="text-lg">WorldId identity:</h2>
+              <h2 className="text-lg">
+                ${session?.user.email ?? session?.user.name ?? "David.eth"}
+              </h2>
+              <button>
+                <button
+                  onClick={(e: any) => {
+                    e.preventDefault();
+                    signOut();
+                  }}
+                >
+                  <h2 className="underline">Log out</h2>
+                </button>
+              </button>
             </div>
           </div>
           <div className={styles.msgAccount}>Messages</div>

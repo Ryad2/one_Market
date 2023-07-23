@@ -30,8 +30,8 @@
     "**/*.mjs",
     "src/components/ui/header.jsx",
     "src/components/ui/button.jsx",
-    "src/pages/search/index.js",
-    "src/pages/sell/index.js"
+    "src/pages/search/index.tsx",
+    "src/pages/sell/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

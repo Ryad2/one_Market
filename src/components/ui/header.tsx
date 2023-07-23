@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { signOut } from "next-auth/react";
+import { Web3Button } from "@web3modal/react";
 
 type HeaderProps = {
   className?: string;
@@ -12,11 +13,6 @@ type HeaderProps = {
 const Header = React.forwardRef<unknown, HeaderProps>(
   ({ className, title }, ref) => {
     const [isSignedIn, setIsSignedIn] = useState(false);
-
-    const handleSignInClick = (e: any) => {
-      e.preventDefault();
-      signOut();
-    };
 
     return (
       <div className={styles.mainHeader}>
@@ -48,13 +44,7 @@ const Header = React.forwardRef<unknown, HeaderProps>(
             <div className={styles.addBtnHeader}>+</div>
           </Link>
         </div>
-        <div className={styles.connectHeader} onClick={handleSignInClick}>
-          <div className={styles.avatarNouns}>
-            <img src="/nouns.png" alt="" />
-          </div>
-
-          {"David"}
-        </div>
+        <Web3Button />
       </div>
     );
   }
