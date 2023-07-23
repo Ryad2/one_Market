@@ -4,6 +4,8 @@ import { useAccount } from "wagmi";
 import styles from "./Index.module.css";
 import Accordeons from "~/components/ui/accordeons";
 import Header from "~/components/ui/header";
+import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -61,6 +63,11 @@ export default function Marketplace() {
               Zkbob. Enjoy encrypted negotiations with XMTP, all in a
               decentralized environment.
             </div>
+            <Link href="/account" className="mt-8 h-12 w-32">
+              <div className="flex h-12 w-32 items-center justify-center rounded-lg bg-blue-400">
+                <h1 className="text-bold text-white">Get Started !</h1>
+              </div>
+            </Link>
           </div>
           <div className={styles.rightIndex}>
             <img src="/imageLanding.png" alt="" />
@@ -70,10 +77,12 @@ export default function Marketplace() {
           <div>Trending categories 🔥</div>
           <div className={styles.categoriesIndex}>
             {categ.map((e, index) => (
-              <div key={index}>
-                <img src={e.img} alt="" />
-                <div>{e.name}</div>
-              </div>
+              <Link href="/account">
+                <div key={index}>
+                  <img src={e.img} alt="" />
+                  <div>{e.name}</div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
