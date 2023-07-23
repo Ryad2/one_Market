@@ -28,6 +28,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   if (!session) {
     return { redirect: { destination: "/auth", permanent: false } };
   } else {
-    return { redirect: { destination: "/account", permanent: false } };
+    return { redirect: { destination: "/marketplace", permanent: false } };
   }
 }

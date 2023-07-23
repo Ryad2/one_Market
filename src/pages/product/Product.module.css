@@ -1,154 +1,155 @@
 .containerProduct {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #EAECF7;
-    box-shadow: 0 4px 4px 0 #DCE1FB;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 10px 24px 10px;
-    border-radius: 24px;
-    padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eaecf7;
+  box-shadow: 0 4px 4px 0 #dce1fb;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 10px 24px 10px;
+  border-radius: 24px;
+  padding: 24px;
 }
 
 .mainProduct {
-    display: flex;
-    background-color: #EAECF7;
-    box-shadow: 0 4px 4px 0 #DCE1FB;
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 24px;
-    padding: 16px;
-    gap: 16px;
+  display: flex;
+  background-color: #eaecf7;
+  box-shadow: 0 4px 4px 0 #dce1fb;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 24px;
+  padding: 16px;
+  gap: 16px;
 }
 
 .leftProduct {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .rightProduct {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid white;
-    padding: 16px;
-    width: 400px;
-    height: 100%;
-    border-radius: 16px;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  padding: 16px;
+  width: 400px;
+  height: 100%;
+  border-radius: 16px;
+  gap: 40px;
 }
 
 .imgProduct {
-    width: 100%;
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    max-height: 400px;
-    margin-bottom: 24px;
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  max-height: 400px;
+  margin-bottom: 24px;
 }
 
 .titleProduct {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1E1E1E;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e1e1e;
 }
 
-.descProduct {}
+.descProduct {
+}
 
 .topRightProduct {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.topRightProduct>div:first-child {
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 700;
+.topRightProduct > div:first-child {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 
 .boxPay {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .sellerInfo {
-    font-weight: 700;
-    font-size: 24px;
-    background-color: #D8DCF7;
-    border-radius: 16px;
-    padding: 7px 16px;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #d8dcf7;
+  border-radius: 16px;
+  padding: 7px 16px;
 }
 
 .contactBtn {
-    font-weight: 700;
-    font-size: 24px;
-    background-color: #8C9AE3;
-    color: white;
-    border-radius: 16px;
-    padding: 7px 16px;
-    transition: 0.2s;
-    cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #8c9ae3;
+  color: white;
+  border-radius: 16px;
+  padding: 7px 16px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .contactBtn:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .contactBtn:active {
-    transform: scale(1.0) translate(2px, 2px);
+  transform: scale(1) translate(2px, 2px);
 }
 
 .boxPay {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .balance {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.5);
-    text-align: end;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: end;
 }
 
 .valueToPay {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 16px;
-    padding: 7px 16px;
-    height: 46px;
-    font-weight: 700;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  padding: 7px 16px;
+  height: 46px;
+  font-weight: 700;
 }
 
 .buyBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #8C9AE3;
-    color: white;
-    border-radius: 16px;
-    padding: 7px 16px;
-    height: 46px;
-    font-weight: 700;
-    font-size: 24px;
-    transition: 0.2s;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8c9ae3;
+  color: white;
+  border-radius: 16px;
+  padding: 7px 16px;
+  height: 46px;
+  font-weight: 700;
+  font-size: 24px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .buyBtn:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .buyBtn:active {
-    transform: scale(1.0) translate(2px, 2px);
+  transform: scale(1) translate(2px, 2px);
 }

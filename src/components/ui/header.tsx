@@ -14,9 +14,21 @@ const Header = React.forwardRef<unknown, HeaderProps>(
   ({ className, title }, ref) => {
     const [isSignedIn, setIsSignedIn] = useState(false);
 
+    const handleInputKeyPress = (event: any) => {
+      // Check if the pressed key is Enter (key code 13)
+      if (event.key === "Enter") {
+        // Get the value from the input field
+        const searchValue = event.target.value;
+        console.log(searchValue);
+        // Navigate to the search page with the value from the input field
+        // router.push(`/search/${searchValue}`);
+        window.location.href = "/search/" + searchValue;
+      }
+    };
+
     return (
       <div className={styles.mainHeader}>
-        <Link href="/">
+        <Link href="/marketplace">
           <div className={styles.logoHeader}>One Chance</div>
         </Link>
         <div className={styles.searchAndAddHeader}>
@@ -38,7 +50,7 @@ const Header = React.forwardRef<unknown, HeaderProps>(
                 </svg>
               </div>
             </Link>
-            <input type="text" />
+            <input type="text" onKeyPress={(e) => handleInputKeyPress(e)} />
           </div>
           <Link href="/sell">
             <div className={styles.addBtnHeader}>+</div>

@@ -7,7 +7,7 @@
     border-radius: 16px;
     cursor: pointer;
     transition: 0.2s;
-    min-width: 300px;
+    /* min-width: 300px; */
     max-width: 300px;
 }
 
