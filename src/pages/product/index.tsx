@@ -1,13 +1,23 @@
 /* eslint-disable */
+import { useSession } from "next-auth/react";
 import styles from "../search/Search.module.css";
+import Image from "next/image";
+import Header from "~/components/ui/header";
 
 export default function Product() {
+  const session = useSession().data;
   return (
     <div className={styles.containerProduct}>
-      <div className={styles.header}>Header here</div>
+      <Header />
       <div className={styles.mainProduct}>
         <div className={styles.leftProduct}>
-          <img className={styles.imgProduct} src="/froyo_pauvre.png" alt="" />
+          <Image
+            height={400}
+            width={300}
+            className={styles.imgProduct}
+            src="/froyo_pauvre.png"
+            alt=""
+          />
           <div className={styles.titleProduct}>Bicycle</div>
           <div className={styles.descProduct}>
             Seize the city streets with this sleek Bicycle Mad Urbain 2 in a
@@ -27,7 +37,9 @@ export default function Product() {
         <div className={styles.rightProduct}>
           <div className={styles.topRightProduct}>
             <div>Seller</div>
-            <div className={styles.sellerInfo}>0xDavid</div>
+            <div className={styles.sellerInfo}>
+              {session?.user.email ?? session?.user.name ?? "David.eth"}
+            </div>
             <div className={styles.contactBtn}>Send a message</div>
           </div>
           <div className={styles.boxPay}>
