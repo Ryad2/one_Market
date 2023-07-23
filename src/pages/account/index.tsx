@@ -6,6 +6,9 @@ import Card from "../../components/ui/card";
 
 import styles from "./Account.module.css";
 import { useSession } from "next-auth/react";
+import { GetServerSidePropsContext } from "next";
+import { getServerSession } from "next-auth";
+import { authOptions } from "~/server/auth";
 
 export default function Account() {
   const session = useSession().data;
@@ -58,4 +61,14 @@ export default function Account() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  if (!session) {
+    return { redirect: { destination: "/auth", permanent: false } };
+  } else {
+    return { redirect: { destination: "/account", permanent: false } };
+  }
 }

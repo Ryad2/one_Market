@@ -68,7 +68,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const session = await getServerSession(context.req, context.res, authOptions);
 
   if (session) {
-    return { redirect: { destination: "/marketplace", permanent: false } };
+    return { redirect: { destination: "/account", permanent: false } };
   } else {
     return { props: {} };
   }
