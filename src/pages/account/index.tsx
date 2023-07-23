@@ -8,7 +8,7 @@ import styles from "./Account.module.css";
 import { useSession } from "next-auth/react";
 
 export default function Account() {
-  const session = useSession();
+  const session = useSession().data;
 
   return (
     <div className={styles.containerAccount}>
@@ -20,7 +20,7 @@ export default function Account() {
               <img src="/nouns.png" alt="" className={styles.imgAccount} />
             </div>
             <div className={styles.nameAccount}>
-              {session.user.email ?? session.user.name ?? "David.eth"}
+              {session?.user.email ?? session?.user.name ?? "David.eth"}
             </div>
           </div>
           <div className={styles.msgAccount}>Messages</div>

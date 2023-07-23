@@ -10,7 +10,7 @@ export default function Sell() {
     title: "",
     description: "",
     price: "",
-    blockchains: [],
+    blockchains: [""],
   });
 
   useEffect(() => {
@@ -26,14 +26,14 @@ export default function Sell() {
     setIsFormComplete(isComplete);
   }, [boutons, formData]);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     const nouveauxBoutons = boutons.map((selected, i) =>
       i === index ? !selected : selected
     );
     setBoutons(nouveauxBoutons);
 
     const selectedBlockchains = nouveauxBoutons.reduce(
-      (acc, selected, index) => {
+      (acc: string[], selected, index) => {
         if (selected) {
           acc.push(`bouton ${index + 1}`);
         }
@@ -48,7 +48,7 @@ export default function Sell() {
     });
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -56,7 +56,7 @@ export default function Sell() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     if (isFormComplete) {
       console.log("Form Data:", formData);

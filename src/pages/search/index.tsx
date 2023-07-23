@@ -13,7 +13,7 @@ export default function Search() {
         <div className="font-bold"> Here are the products for“ Bicycles” </div>{" "}
         <div className={styles.mosaicSearch}>
           <Link href="/product/5452547354">
-            <Card title="Bicycle" img="./ee.png" />
+            <Card title="Bicycle" />
           </Link>
           <Card title="Bicycle 2" />
           <Card title="Bicycle 3" />
